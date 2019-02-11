@@ -1,4 +1,4 @@
-# Systemd unit file and configuration example for [9seconds/mtg](https://github.com/9seconds/mtg)
+# The systemd unit file and configuration example for [9seconds/mtg](https://github.com/9seconds/mtg)
 
 The [mtg](https://github.com/9seconds/mtg) application is the very tiny and bullshit-free MTProto proxy realization (useful if you need to chat in Telegram reliably in Russia). 
 
