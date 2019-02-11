@@ -1,0 +1,16 @@
+[Unit]
+Description=MTProxy (Telegram proxy server)
+
+[Service]
+WorkingDirectory=/etc/mtproxy/
+User=root
+Type=forking
+RemainAfterExit=yes
+
+ExecStart=/usr/bin/tmux new-session -s mtproxy -d '/usr/local/bin/mtproxy $(cat /etc/mtproxy/arguments)' 
+
+ExecStop=/usr/bin/tmux kill-session -t mtproxy
+ExecStop=/bin/sleep 2
+
+[Install]
+WantedBy=multi-user.target
